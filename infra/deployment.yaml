@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urlshorter-deployment
+  labels:
+    app: urlshorter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: urlshorter
+  template:
+    metadata:
+      labels:
+        app: urlshorter
+    spec:
+      containers:
+      - name: urlshorter
+        image: leogregianin/urlshorter:0.0.1
+        ports:
+        - containerPort: 8000

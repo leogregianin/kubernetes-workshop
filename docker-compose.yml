@@ -1,0 +1,31 @@
+version: '1'
+
+services:
+  database:
+    image: postgres:15.3-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_pw
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    expose:
+      - 8000
+    depends_on:
+      - database
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
