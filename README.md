@@ -20,6 +20,7 @@ Existem diversos *trade-offs* ao utilizar **Kubernetes**, os benefícios e desva
 ## Requisitos técnicos
 
 ### Rodar a aplicação:
+    $ mv .env.example .env
     $ docker compose up -d
 
 ![docker compose up](docs/docker_compose_up.png)
