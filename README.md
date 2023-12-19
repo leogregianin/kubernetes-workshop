@@ -65,3 +65,7 @@ Existem diversos *trade-offs* ao utilizar **Kubernetes**, os benefícios e desva
     $ kubectl get pods
 
 ![k8s scale](docs/k8s-replicas.png)
+
+### App
+
+![app](docs/app.png)
