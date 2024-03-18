@@ -1,4 +1,4 @@
-django==4.2.7
+django==4.2.11
 djangorestframework==3.14.0
 gunicorn==21.2.0
 dj-database-url==2.1.0
